@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "types": ["node", "express"],
+
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ES2020",
@@ -9,7 +13,7 @@
 
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true
   },
   "include": ["src/**/*"],

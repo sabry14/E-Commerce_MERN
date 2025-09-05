@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import userRoutes from "./routes/userRoutes";
 import { seedInitialProducts } from "./services/productService";
 import productRoutes from "./routes/productRoutes";
+import cartRoutes from "./routes/cartRoutes";
 
 const app = express()
 const port = 3000
@@ -14,6 +15,7 @@ then(()=> console.log("mongo connected"))
 seedInitialProducts()
 app.use('/product',productRoutes)
 app.use('/user',userRoutes)
+app.use('/cart',cartRoutes)
 app.listen(port ,() => {
     console.log("server is running at : http://localhost:3000")
 
